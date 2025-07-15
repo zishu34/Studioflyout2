@@ -1,0 +1,166 @@
+/* Google Font */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #0f0f0f;
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar h1 span {
+  color: #f9b416;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  background-color: #f9b416;
+  color: #000;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1c1c1c, #0f0f0f);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #f9b416;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Services */
+.services {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Gallery */
+.gallery {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.media-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.media-grid img,
+.media-grid video {
+  max-width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+
+.media-grid img:hover,
+.media-grid video:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: #181818;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+footer a {
+  color: #f9b416;
+  text-decoration: none;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-grid,
+  .media-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    background: #000;
+    gap: 10px;
+  }
+}
